@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mushrooms of the western Ukraine</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: green;
+      }
+      h2 {
+        text-align: center;
+        color: green;
+        border: 1px solid;
+        margin: 20px;
+        padding: 25px;
+        border-radius: 7px;
+      }
+      .picture {
+        display: block;
+        margin: 0 auto;
+        max-width: 150%;
+        padding: 40px;
+        border-radius: 50px;
+      }
+      .more-info {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        text-align: center;
+        color: #2e8306;
+      }
+      .more-info:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        background: #2e8306;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0, 5);
+        transition: all 300ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .builder {
+        text-decoration: none;
+        color: #2e8306;
+      }
+      .builder:hover {
+        text-decoration: underline;
+      }
+      .constructor {
+        text-align: center;
+      }
+      .container {
+        max-width: 100px;
+        margin: O auto;
+        padding: 80px;
+      }
+      .maintext {
+        margin-left: 330px;
+        margin-right: 330px;
+        line-height: 1.5;
+        font-size: 15;
+      }
+      hr {
+        width: 600px;
+      }
+      .content {
+        background: linear-gradient(#bbdbbe, #deebdd);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Mushrooms of western Ukraine</h1>
+      <h2>White mushroom - bread for gustuls</h2>
+      <img
+        class="picture"
+        src="https://preview.redd.it/1dqhgehowap71.jpg?width=576&format=pjpg&auto=webp&s=28417c13fafe9a79be26819ad925416383fb1e3f"
+        alt="here is the white mushroom"
+      />
+
+      <p class="maintext">
+        Looking for wild mushrooms? Look to
+        <span
+          ><em><strong>Ukraine</strong> </em>
+        </span>
+        . The country is a hotbed for wild mushrooms — and foraging them to eat
+        and sell is something of a national pastime. This year, a bumper crop of
+        mushrooms is rewarding locals with plenty to eat and sell to
+        restaurants, which is helping some families navigate an economic
+        downturn during the pandemic. But because of the virus, other
+        mushroom-loving Ukrainians are hurting — namely, tour guides who lead
+        mushroom-foraging trips.
+        <br />
+      </p>
+      <a
+        href="https://green-ukraine.com/mushroom-tour-carpathians/"
+        target="_blank"
+        class="more-info"
+        >Watch more info about Carpatians mushrooms</a
+      >
+      <button>👆Order some mushrooms</button>
+      <hr />
+      <p class="constructor">
+        This page was built by
+        <a href="https://en.wikipedia.org/wiki/Academy_Awards" class="builder"
+          >Oscar</a
+        >
+      </p>
+    </div>
+  </body>
+  <script>
+    function order() {
+      alert(
+        "Would you like to order some tasty mushrooms ? If yes - answer next questions "
+      );
+      let name = prompt("What is your name ?");
+      let weight = prompt("How many kilograms do you want ");
+      let distance = prompt("How far do you live  ? (in miles)");
+      let textDetails = document.querySelector(".maintext");
+
+      if (weight < 50) {
+        textDetails.innerHTML =
+          "Thank you for you order " +
+          name +
+          " , our sales manager will get in contact  with you in a minute 👌";
+      } else {
+        textDetails.innerHTML =
+          "Unfortunatelly we cannot manage you order, " +
+          name +
+          " , becase of drought, contact us in  the end of the month . Thank you .";
+      }
+    }
+    let orderSomeMushrooms = document.querySelector("button");
+    orderSomeMushrooms.addEventListener("click", order);
+  </script>
+</html>
